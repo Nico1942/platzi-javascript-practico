@@ -36,7 +36,7 @@ html {
 
 body {
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   margin: 0;
 }
 
@@ -89,6 +89,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 0;
+  margin: 10px;
   box-shadow: 2px 2px 2px #3c442b,
               -2px -2px 2px #999;
 }
@@ -105,6 +106,10 @@ body {
   margin: 0;
 }
 
+.container__title h3 {
+  font-size: 1.8rem;
+}
+
 .container__logo {
   display: flex;
   align-items: center;
@@ -118,8 +123,22 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   padding: 5px;
 }
+
+form > label {
+  font-size: 1.8rem;
+  padding: 5px;
+}
+
+form > input, form > button {
+  padding: 5px;
+  max-width: 40%;
+  margin: 5px;
+  font-size: 1.5rem;
+}
+
 
 .container__return {
   display: flex;

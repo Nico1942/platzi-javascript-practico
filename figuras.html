@@ -25,7 +25,7 @@
 
   <main class="container">
 
-    <section class="container__figure" id="Cuadrado">
+    <section class="container__figure">
       <div class="container__title">
 	<div>
 	  <div class="container__logo">
@@ -40,7 +40,7 @@
 	  Medidas de los lados:
         </label>
         <input type="number" id="ladosCuadrados" placeholder="5" />
-        <button type="button">Calcular</button>
+        <button type="button" onclick="calcularCuadrado()">Calcular</button>
       </form>
       <div class="container__return">
 	<p>Perímetro:</p>
@@ -50,8 +50,61 @@
       </div>
     </section>
 
-  </main>
+    <section class="container__figure">
+      <div class="container__title">
+	<div>
+	  <div class="container__logo">
+	    <div class="triangle"></div>
+	  </div>
+	  <h3>Triángulo</h3>
+	</div>
+	<p class="sutitle">Calcula el área y el perímetro de un triángulo isósceles.</p>
+      </div>
+      <form>
+        <label for="ladoA">
+	  Medidas de los lados:
+        </label>
+        <input type="number" id="ladoA" placeholder="5" />
+	<label for="base">
+	  Medida de la base:
+	</label>
+	<input type="number" id="base" placeholder="5" />
+        <button type="button" onclick="calcularTriangulo()">Calcular</button>
+      </form>
+      <div class="container__return">
+	<p>Perímetro:</p>
+	<p><span id="Triangulo_perimetro">0<span> cm</p>
+	<p>Área:</p>
+	<p><span id="Triangulo_area">0<span> cm<sup>2</sup></p>
+      </div>
+    </section>
 
+    <section class="container__figure" >
+      <div class="container__title">
+	<div>
+	  <div class="container__logo">
+	    <div class="circle"></div>
+	  </div>
+	  <h3>Cuadrado</h3>
+	</div>
+	<p class="sutitle">Calcula el área y el perímetro de un círculo.</p>
+      </div>
+      <form>
+        <label for="radio">
+	  Medidas del radio:
+        </label>
+        <input type="number" id="radio" placeholder="5" />
+        <button type="button" onclick="calcularCirculo()">Calcular</button>
+      </form>
+      <div class="container__return">
+	<p>Perímetro:</p>
+	<p><span id="Circunsferencia">0<span> cm</p>
+	<p>Área:</p>
+	<p><span id="Circulo_area">0<span> cm<sup>2</sup></p>
+      </div>
+    </section>
+
+  </main>
 
   <script src="./figuras.js"></script>
 </body>

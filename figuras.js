@@ -98,3 +98,38 @@ console.log("El área del círculo es: " + areaCirculo(radioCirculo) + "cm².");
 
 console.groupEnd();
 
+// Aquí interactuamos con el HTML
+
+function calcularCuadrado() {
+  const ladosCuadrado = document.getElementById("ladosCuadrados").value;
+  const Perimetro = document.getElementById("Cuadrado_perimetro");
+  const Area = document.getElementById("Cuadrado_area");
+
+  Perimetro.innerHTML = perimetroCuadrado(ladosCuadrado) + " cm";
+  Area.innerHTML = areaCuadrado(ladosCuadrado) + " cm<sup>2</sup>";
+}
+
+function calcularAltura(lado, base) {
+  return Math.sqrt(lado**2 + (base**2)/4);
+}
+
+function calcularTriangulo() {
+  const ladoA = Number(document.getElementById("ladoA").value);
+  const base = Number(document.getElementById("base").value);
+  const altura = calcularAltura(ladoA, base); 
+  const Perimetro = document.getElementById("Triangulo_perimetro");
+  const Area = document.getElementById("Triangulo_area");
+
+  Perimetro.innerHTML = perimetroTriangulo(ladoA, ladoA, base) + " cm";
+  Area.innerHTML = (areaTriangulo(base, altura)).toFixed(2) + " cm<sup>2</sup>";
+}
+
+function calcularCirculo(){
+  const radio = document.getElementById("radio").value;
+  const Perimetro = document.getElementById("Circunsferencia");
+  const Area = document.getElementById("Circulo_area");
+
+  Perimetro.innerHTML = perimetroCirculo(radio) + " cm";
+  Area.innerHTML = areaCirculo(radio) + " cm<sup>2</sup>";
+
+}
