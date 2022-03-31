@@ -1,0 +1,78 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: darkblue;
+  color: white;
+  padding: 2% 10% 10%;
+}
+
+.header__logo {
+  font-size: 150%;
+  color: lightblue;
+  text-shadow: 2px 2px darkred;
+}
+
+.header__subtitle {
+  font-size: 80%;
+  padding-left: inherit;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.container__card {
+  position: absolute;
+  top: -10%;
+  box-sizing: border-box;
+  border: 5px solid black;
+  border-radius: 5%;
+  background-color: white;
+  width: 50%;
+  height: max-content;
+  max-width: 400px;
+  padding: 5%;
+}
+
+.card__title {
+  font-size: 90%;
+  margin: 0;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  margin-top: 20px;
+  height: 100%;
+}
+
+form > label {
+  font-size: 80%;
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+/* Para Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -21,7 +21,12 @@ function Calcular() {
   const descuento = document.getElementById("inputDescuento").value;
   const resultP = document.getElementById("resultadoPrecio");
 
-  const resultado = calcularPrecioConDescuento(precio, descuento);
-
- resultP.innerHTML = "Precio final: $" + resultado;
+  if (descuento >= 0 && descuento <= 100) {
+    const resultado = calcularPrecioConDescuento(precio, descuento);
+    resultP.innerHTML = "Precio final: $" + resultado;
+  }
+  else
+  {
+    resultP.innerHTML = "Descuento incorrecto. Por favor verificar."
+  }
 }
